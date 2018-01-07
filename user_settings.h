@@ -22,4 +22,7 @@ static inline int hwrand_generate_block(uint8_t *buf, size_t len) {
 
 #define CUSTOM_RAND_GENERATE_BLOCK hwrand_generate_block
 
+#define NO_MD5
+#define NO_SHA
+
 #endif
