@@ -9,7 +9,6 @@ static inline int hwrand_generate_block(uint8_t *buf, size_t len) {
 }
 
 #define FREERTOS
-#define WOLFCRYPT_ONLY
 #define WC_NO_HARDEN
 #define NO_WOLFSSL_DIR
 #define SINGLE_THREADED
