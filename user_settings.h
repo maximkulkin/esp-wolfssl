@@ -3,6 +3,9 @@
 
 #ifdef ESP_IDF
 
+#define WOLFSSL_ESPIDF
+#define WOLFSSL_ESPWROOM32
+
 #include <esp_system.h>
 
 static inline int hwrand_generate_block(uint8_t *buf, size_t len) {
@@ -34,8 +37,6 @@ static inline int hwrand_generate_block(uint8_t *buf, size_t len) {
 
 #define MP_LOW_MEM
 
-#endif
-
 #define FREERTOS
 #define WC_NO_HARDEN
 #define NO_WOLFSSL_DIR
@@ -45,6 +46,8 @@ static inline int hwrand_generate_block(uint8_t *buf, size_t len) {
 
 #define NO_WOLFSSL_MEMORY
 #define NO_WOLFSSL_SMALL_STACK
+
+#endif
 
 #define CUSTOM_RAND_GENERATE_BLOCK hwrand_generate_block
 
