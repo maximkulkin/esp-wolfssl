@@ -15,6 +15,10 @@ ifdef component_compile_rules
     $(eval $(call component_compile_rules,wolfssl))
 else
     # ESP_IDF
+    ifeq ($(IDF_TARGET),esp32)
+    EXTRA_CFLAGS += -DWOLFSSL_ESPWROOM32
+    endif
+
     wolfssl_THIRDPARTY_ROOT = wolfssl-$(wolfssl_VERSION)
 
     COMPONENT_SRCDIRS = $(wolfssl_THIRDPARTY_ROOT)/src $(wolfssl_THIRDPARTY_ROOT)/wolfcrypt/src $(wolfssl_THIRDPARTY_ROOT)/wolfcrypt/src/port/Espressif

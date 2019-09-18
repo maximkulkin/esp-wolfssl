@@ -4,7 +4,6 @@
 #ifdef ESP_IDF
 
 #define WOLFSSL_ESPIDF
-#define WOLFSSL_ESPWROOM32
 
 #include <esp_system.h>
 
