@@ -1,4 +1,4 @@
-set(wolfssl_VERSION "3.13.0-stable")
+set(wolfssl_VERSION "4.1.0")
 set(wolfssl_THIRDPARTY_ROOT "wolfssl-${wolfssl_VERSION}")
 
 file(GLOB WOLF_SRCS
