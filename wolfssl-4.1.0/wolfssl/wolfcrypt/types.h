@@ -292,6 +292,8 @@
         #include <stdlib.h>
         #define XMALLOC(s, h, t)     ((void)h, (void)t, malloc((s)))
         #define XFREE(p, h, t)       {void* xp = (p); if((xp)) free((xp));}
+/////// This #undef is added to suppress a redefinition warning. It does not change the meaning of the code
+        #undef  XREALLOC
         #define XREALLOC(p, n, h, t) realloc((p), (n))
         #endif
     #elif !defined(MICRIUM_MALLOC) && !defined(EBSNET) \
