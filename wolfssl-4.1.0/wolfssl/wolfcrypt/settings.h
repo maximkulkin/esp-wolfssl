@@ -1462,6 +1462,7 @@ extern void uITRON4_free(void *p) ;
 #if !defined(XMALLOC_USER) && !defined(MICRIUM_MALLOC) && \
     !defined(WOLFSSL_LEANPSK) && !defined(NO_WOLFSSL_MEMORY) && \
     !defined(XMALLOC_OVERRIDE)
+    #undef USE_WOLFSSL_MEMORY
     #define USE_WOLFSSL_MEMORY
 #endif
 
